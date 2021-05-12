@@ -1,61 +1,87 @@
-# sedrica setup
+# SeDriCa setup
 
-turn the UPS(ensure it is not in bypass mode), and then turn on the CPU.
+**ENSURE YOU HAVE SOURCED PROPERLY BEFORE RUNNING ANY COMMAND**
 
+### Initial steps:
+Turn the UPS(ensure it is not in bypass mode), and then turn on the CPU.
+
+```bash
 cd SeDriCa
-source 
+source devel/setup.bash 
+roscore
+```
 
-> roscore
-
-camera setup
+### Camera setup:
 connect cameras and set to pc camera mode
-
-> roslaunch usb_cam usb_cam-test.launch
-check using **rqt_image_view**
+```bash
+roslaunch usb_cam usb_cam-test.launch
+```
+check using **rqt_image_view**, the views of all camera published on camera{id}/image_raw
 
 first connect imu and then gps
 
-imu and gps setup
-run /home/admin/SeDriCa/src/sensors/src/sparton_main_imu/scripts/SpartonCompassIMU.py
-run /home/admin/SeDriCa/src/sensors/src/gps/nmea_navsat_driver/scripts/nmea_serial_driver.py
-(check the paths accordingly)
+# IMU and GPS setup:
+```bash
+cd SeDriCa/src/sensors/src/sparton_main_imu/scripts
+python SpartonCompassIMU.py
+cd ~
+cd SeDriCa/src/sensors/src/gps/nmea_navsat_driver/scripts
+python nmea_serial_driver.py
+```
 
 if it is showing port open error, then write this command:
 >sudo chmod 777 /dev/ttyUSB1
 
-ttyUSB0 or ttyUSB1, just  check which port is not open
+ttyUSB0 or ttyUSB1, just check which port is not open and ensure that one of these is in ttyUSB0 and the other in ttyUSB1.
 
-just ensure that one of these is in ttyUSB0 and the other in ttyUSB1.
-
-2d-lidar setup
+# 2d-Lidar setup:
 
 check the voltage of the battery and connect LAN wire.
 
+```bash
 rosrun lms1xx LMS1xx_node
+```
 
-Road detection and lane detection setup
+# Road detection and Lane detection setup:
 
 ensure the lane and road detection parameters are in the same order as cameras (left is 1, middle is 2 and right is 3)
 
-run /home/admin/SeDriCa/src/road_detection/all_linknet.py -m test_ros
-run /home/admin/SeDriCa/src/lane_detection/all_linknet.py -m test_ros
+```bash
+cd SeDriCa/src/road_detection
+python all_linknet.py -m test_ros
+cd ~
+cd SeDriCa/src/lane_detection
+python all_linknet.py -m test_ros
 rosrun image_transform ipm_lane
 rosrun image_transform ipm_road
+```
 
-path planning setup
+# Path planning setup:
+```bash
 roslaunch hybrid_astar final.launch 
+```
 
-can module setup:
+# Can Module setup:
 
 switch on the CAN module using the rotating black switch(key switch)
-
+```bash
 cd SeDriCa/src/control/scripts 
 python car_status_txt_ros.py
+python accu-sgu_txt.py
+```
+
+# Controls setup:
+```bash
 rosrun controller pid 
+```
 
-press the green button to start auto mode
+# Final step:
 
-ouster setup:
+Press the green button to start auto mode. Press the red button as soon as you want to stop the car.
 
-**sudo wireshark** for checking data and port
+# Ouster setup:
+
+> *sudo wireshark* for checking data and port
+```bash
 roslaunch ouster_ros os1.launch
+```
