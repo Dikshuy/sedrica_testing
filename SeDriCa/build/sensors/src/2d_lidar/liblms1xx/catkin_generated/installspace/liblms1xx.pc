@@ -1,0 +1,8 @@
+prefix=/home/admin/SeDriCa/install
+
+Name: liblms1xx
+Description: Description of liblms1xx
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -llms1xx
+Requires: roscpp sensor_msgs

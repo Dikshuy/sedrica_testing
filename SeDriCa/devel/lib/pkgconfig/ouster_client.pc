@@ -1,0 +1,8 @@
+prefix=/home/admin/SeDriCa/devel
+
+Name: ouster_client
+Description: Description of ouster_client
+Version: 0.1.0
+Cflags: -I/home/admin/SeDriCa/src/sensors/src/3d_lidar/ouster/ouster_client/include -I/usr/include/jsoncpp
+Libs: -L${prefix}/lib -louster_client -ljsoncpp
+Requires: 

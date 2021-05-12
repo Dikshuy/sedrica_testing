@@ -1,0 +1,8 @@
+prefix=/home/admin/SeDriCa/devel
+
+Name: global_map
+Description: Description of global_map
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
