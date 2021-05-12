@@ -1,0 +1,8 @@
+prefix=/home/admin/SeDriCa/devel
+
+Name: camera1394stereo
+Description: Description of camera1394stereo
+Version: 1.0.3
+Cflags: -I/home/admin/SeDriCa/devel/include
+Libs: -L${prefix}/lib -lcamera1394stereo
+Requires: 

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/admin/SeDriCa/src/sensors/src/2d_lidar/liblms1xx/libLMS1xx/LMS1xx.cpp
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+unistd.h
+-
+LMS1xx.h
+/home/admin/SeDriCa/src/sensors/src/2d_lidar/liblms1xx/libLMS1xx/LMS1xx.h
+
+/home/admin/SeDriCa/src/sensors/src/2d_lidar/liblms1xx/libLMS1xx/LMS1xx.h
+string
+-
+stdint.h
+-
+

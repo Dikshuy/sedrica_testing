@@ -1,0 +1,8 @@
+/home/sine/SeDriCa/sensors/devel
+/home/sine/SeDriCa/path_plan/devel
+/home/sine/SeDriCa/map_generator/devel
+/home/sine/SeDriCa/controls/devel
+/home/sine/SeDriCa/object_tracking/devel
+/opt/ros/kinetic
+/home/sine/SeDriCa/source_ws/devel
+/home/sine/darknet_ws/devel

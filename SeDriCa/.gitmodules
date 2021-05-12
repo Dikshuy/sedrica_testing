@@ -1,0 +1,40 @@
+[submodule "src/usb_cam"]	
+	path = src/usb_cam
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = usb_cam
+[submodule "src/stereo"]
+	path = src/stereo
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = stereo
+[submodule "src/sparton_main_imu"]
+	path = src/sparton_main_imu
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = sparton_main_imu
+[submodule "src/pcl_ros"]
+	path = src/pcl_ros
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = pcl_ros
+[submodule "src/image_transform"]
+	path = src/image_transform
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = image_transform
+[submodule "src/gps"]
+	path = src/gps
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = gps
+[submodule "src/cv_bridge"]
+	path = src/cv_bridge
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = cv_bridge
+[submodule "src/2d_lidar"]
+	path = src/2d_lidar
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = 2d_lidar
+[submodule "src/darknet_ros_msgs"]
+	path = src/darknet_ros_msgs
+	url = https://github.com/Innovation-Cell/sensors.git
+	branch = darknet_ros_msgs
+[submodule "src/3d_lidar"]
+        path = src/3d_lidar
+        url = https://github.com/Innovation-Cell/sensors.git
+        branch = 3d_lidar
