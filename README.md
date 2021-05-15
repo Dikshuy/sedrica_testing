@@ -1,4 +1,7 @@
 # SeDriCa setup
+Linux version: ubuntu=16.04
+
+Requirements: python=2.7, tensorflow=1.13.1, numpy=1.15.0, opencv=3.3.1
 
 **ENSURE YOU HAVE SOURCED PROPERLY BEFORE RUNNING ANY COMMAND**
 
